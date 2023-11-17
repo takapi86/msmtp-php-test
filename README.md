@@ -11,7 +11,11 @@ docker compose build
 docker compose up
 ```
 
-### 3. スクリプトを実行して検証します
+### 3. mailcatcherをブラウザで開きます
+
+http://localhost:1080/
+
+### 4. スクリプトを実行して検証します
 
 ```bash
 docker compose run --rm app php sendmail.php
