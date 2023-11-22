@@ -16,7 +16,7 @@ RUN wget https://marlam.de/msmtp/releases/msmtp-${MSMTP_VERSION}.tar.xz \
     && tar xvf msmtp-${MSMTP_VERSION}.tar.xz
 
 WORKDIR /msmtp-${MSMTP_VERSION}
-RUN ./configure \
+RUN ./configure --without-msmtpd \
     && make \
     && make install
 
