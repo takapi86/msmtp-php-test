@@ -23,6 +23,10 @@ RUN ./configure --without-msmtpd \
 FROM ubuntu:20.04
 
 COPY --from=builder /usr/local/bin/msmtp /usr/local/bin/
+COPY ./detect_random_mailhost.sh /usr/local/bin/
+COPY ./msmtprc /usr/local/etc/msmtprc
+
+RUN chmod +x /usr/local/bin/detect_random_mailhost.sh
 
 RUN apt-get update \
     && apt-get -y upgrade \

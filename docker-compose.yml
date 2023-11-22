@@ -12,6 +12,7 @@ services:
       - ./src:/usr/src/app
       - ./php.ini:/etc/php/7.4/cli/php.ini
       - ./msmtprc:/usr/local/etc/msmtprc
+      - ./detect_random_mailhost.sh:/usr/local/bin/detect_random_mailhost.sh
   mailcatcher1:
     image: schickling/mailcatcher
     ports:
