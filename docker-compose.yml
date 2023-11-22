@@ -11,7 +11,7 @@ services:
     volumes:
       - ./src:/usr/src/app
       - ./php.ini:/etc/php/7.4/cli/php.ini
-  mailcatcher:
+      - ./msmtprc:/usr/local/etc/msmtprc
     image: schickling/mailcatcher
     ports:
       - "1080:1080"
